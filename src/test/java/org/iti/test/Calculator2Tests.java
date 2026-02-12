@@ -3,13 +3,12 @@ package org.iti.test;
 import org.iti.Calculator;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.condition.DisabledForJreRange;
-import org.junit.jupiter.api.condition.EnabledOnJre;
 import org.junit.jupiter.api.condition.JRE;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrowsExactly;
 
-public class CalculatorTests {
+public class Calculator2Tests {
     private static Calculator calculator;
 
     /*@BeforeEach
