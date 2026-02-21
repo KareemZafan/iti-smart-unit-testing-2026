@@ -29,7 +29,7 @@ public class StackTests {
         assertFalse(myStack.isStackEmpty());
         assertEquals(4, myStack.getStackSize());
         assertEquals(-1, myStack.getStackPeek());
-        assertEquals(List.of(1, 700, 600), myStack.getStackElements());
+        assertEquals(List.of(1, 700, 600,-1), myStack.getStackElements());
     }
 
     @Test
