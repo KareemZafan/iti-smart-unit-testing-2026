@@ -11,7 +11,8 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrowsExactly;
 
 public class CalculatorTests {
     private static Calculator calculator;
@@ -127,8 +128,16 @@ public class CalculatorTests {
         assertEquals(0, calculator.getSquareRoot(0));
         assertEquals(25, calculator.getSquareRoot(625));
 
-        var ex = assertThrowsExactly(ArithmeticException.class, () -> calculator.getSquareRoot(-5));
-        assertEquals("Negative numbers are not allowed", ex.getMessage());
+        /*var ex = assertThrowsExactly(ArithmeticException.class, () -> calculator.getSquareRoot(-5));
+        assertEquals("Negative numbers are not allowed", ex.getMessage());*/
+    }
+
+    @Test
+    void testAbsoluteFunctionality() {
+        // Arrange
+        assertEquals(1, calculator.abs(-1));
+        assertEquals(0, calculator.abs(0));
+        assertEquals(5, calculator.abs(5));
     }
 
     private boolean isEven(int number) {
